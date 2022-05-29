@@ -1,0 +1,10 @@
+.explore-button {
+    width: 230px;
+    height: 60px;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    background : linear-gradient(to right bottom, $color-secondary, $color-primary);
+    box-shadow: gray 0px 2px 10px ;
+    cursor: pointer;
+}

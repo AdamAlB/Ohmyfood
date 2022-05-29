@@ -1,0 +1,28 @@
+footer {
+    background-color: #353535;
+    color: white;
+    display: flex;
+    padding: 10px 20px;
+    @include flex-column;
+    .footer-heading {
+        font-family: 'Shrikhand', sans-serif;
+        
+    }
+    .footer-content {
+        @include flex-column;
+        h3 {
+            margin: 5px 0px;
+        }
+        a {
+            color: white;
+        }
+        .footer-text-i a {
+            @include flex-row;
+            align-items: center;
+            h3 {
+                padding: 0px 10px;
+            }
+            
+        }
+    }
+}

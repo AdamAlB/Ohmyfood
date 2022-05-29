@@ -1,0 +1,23 @@
+header {
+    
+    height: 130px;
+    
+    .header-logo {
+        @include flex-center ;
+        box-shadow: grey 0px 0px 7px ;
+        height: 70px;
+        
+
+    }
+
+    .nav-location {
+        background-color: $bg-color-nav;
+        height: 60px;
+        @include flex-center;
+        
+        position: relative;
+        z-index: -1;
+    }
+    
+}
+    

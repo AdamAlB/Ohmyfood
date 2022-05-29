@@ -1,0 +1,61 @@
+.form-location {
+    
+    .location {
+    border: none;
+    background-color: $bg-color-nav;
+    width: 150px;
+    }
+}
+
+
+.section-find-restaurant {
+    margin: 20px;
+    @include flex-column;
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    .find-restaurant-content {
+        
+        @include flex-column;
+           
+    
+    .form-find-restaurant {
+        border: $bg-color-general solid;
+        width: 100%;
+        background-color: $bg-color-general;
+        margin: 20px 0px;
+        height: 75px;
+        display: flex;
+        align-items: center;
+        border-radius: 25px;
+        box-shadow: $bg-color-nav 0px 5px 5px ;
+
+        .find-restaurant-number {
+            padding: 5px 10px;
+            border-radius: 50px;
+            background-color: $color-primary;
+            color: white;
+            position: relative;
+            right: 15px;
+            @include flex-center;
+            
+            
+            
+        }
+        
+        
+        .find-restaurant-img i {
+            background-color: $bg-color-general;
+            padding: 0px 5px;
+            
+        }
+        .find-restaurant-text {
+            border: none;
+            background-color: $bg-color-general;
+            padding-left: 10px;
+        }
+    }
+    }
+}
