@@ -1,14 +1,25 @@
 header {
     
-    height: 130px;
     
-    .header-logo {
+    
+    .header-logo, .header-logo-resto {
         @include flex-center ;
         box-shadow: grey 0px 0px 7px ;
         height: 70px;
+        position: relative;
         
 
     }
+    
+    .header-logo-resto {
+        i {
+            position: absolute;
+            left: 2%;
+            font-size: 125%;
+        }
+    }
+
+}
 
     .nav-location {
         background-color: $bg-color-nav;
@@ -19,5 +30,5 @@ header {
         z-index: -1;
     }
     
-}
+
     

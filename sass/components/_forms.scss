@@ -9,28 +9,41 @@
 
 
 .section-find-restaurant {
-    margin: 20px;
-    @include flex-column;
+    padding: 20px;
+    
 
     h2 {
         margin-bottom: 0;
     }
 
     .find-restaurant-content {
-        
+
+        @media screen and (max-width : 992px) {
         @include flex-column;
+        }
+        @include flex-row;
+        @include flex-center;
            
     
     .form-find-restaurant {
         border: $bg-color-general solid;
+        @media screen and (max-width : 992px) {
         width: 100%;
+        margin: 10px;
+        }
+        width: 30%;
         background-color: $bg-color-general;
-        margin: 20px 0px;
+        margin: 1%;
         height: 75px;
         display: flex;
         align-items: center;
         border-radius: 25px;
         box-shadow: $bg-color-nav 0px 5px 5px ;
+        cursor: pointer;
+
+        &:hover {
+            background-color: darken($color-secondary, 50%);
+        }
 
         .find-restaurant-number {
             padding: 5px 10px;
@@ -40,6 +53,7 @@
             position: relative;
             right: 15px;
             @include flex-center;
+            cursor: pointer;
             
             
             
@@ -48,14 +62,18 @@
         
         .find-restaurant-img i {
             background-color: $bg-color-general;
+            color: darken($bg-color-general, 50%);
             padding: 0px 5px;
+            cursor: pointer;
             
         }
         .find-restaurant-text {
             border: none;
             background-color: $bg-color-general;
             padding-left: 10px;
+            cursor: pointer;
         }
     }
     }
 }
+

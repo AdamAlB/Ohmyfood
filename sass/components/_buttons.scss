@@ -4,7 +4,11 @@
     border-radius: 50px;
     border: none;
     color: white;
-    background : linear-gradient(to right bottom, $color-secondary, $color-primary);
+    background : $linear-gradient;
     box-shadow: gray 0px 2px 10px ;
     cursor: pointer;
+    transition: all 500ms;
+    &:hover {
+        transform: scale(1.1);
+    }
 }

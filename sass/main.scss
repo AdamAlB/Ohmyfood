@@ -39,7 +39,7 @@ a {
     @include flex-column;
     padding: 25px 20px;
     h1 {
-        width: 80%;
+        
         
         font-size: 150%;
         
@@ -57,47 +57,76 @@ a {
 
     .restaurants-content {  
         @include flex-center;
-        @include flex-column;  
+        @include flex-row;  
+        .new {
+            position: relative;
+            &::before {
+                content: "Nouveau";
+                font-weight: bold;
+                font-size: 90%;
+                border-radius: 2px;
+                position: absolute;
+                height: 30px;
+                width: 85px;
+                background-color: $color-tertiary;
+                color: darken($color-tertiary, 40%);
+                @include flex-center;
+                right: 5%;
+                top: 5%;
+            }
+        }
         .restaurants-cards {
             box-shadow: $bg-color-nav 0px 8px 7px ;
             border-radius: 0px 0px 25px 25px ;
-            margin: 20px 0px;
-            
-            width: 100%;
+            margin: 20px;
+            width: 43%;
+            @media screen and (max-width : 768px) {
+                width: 100%;
+            }
             .restaurants-img {
                 width : 100%;
                 height: 175px;
                 border-radius: 15px 15px 0px 0px;
                 object-fit: cover;
-                display: flex;
+                display: flex;                
                 
             }
             .restaurants-cards-content {
+                position: relative;
                 height: 75px;
                 background-color: white;
                 border-radius: 0px 0px 15px 15px ;
-                @include flex-space-between;
                 align-items: center;
-                padding: 0px 10px;
+                padding: 15px;
                 h3 {
                     margin: 0;
+                    
                 }
                 p {
                     margin: 0;
+                    padding-top: 5px;
                 }
-                .restaurants-heart {
+
+                i {
                     font-size: 25px;
-                    padding-right: 15px;
-                    background-clip: text;
-                    background-color: linear-gradient(to right bottom, $color-secondary, $color-primary);
-                   
-                        &__i:hover {
-                            
-                         
-                        }
+                    position: absolute;
+                    right: 5%;
+                    bottom: 35%;
+                    
+                }
+                .fas {                  
+                        color: transparent;
+                        background-image: $linear-gradient;
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        opacity: 0;
+                        transition: all 300ms;
+                        &:hover {
+                            opacity: 1;
+                            transform: scale(1.1);
+                        }                    
                     }
                 }
-            
         }
     }
 }
@@ -105,3 +134,4 @@ a {
 /* Footer */
 
 @import './layout/footer' ;
+@import 'pages/resto' ;
