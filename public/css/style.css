@@ -26,6 +26,7 @@ header .header-logo, header .header-logo-resto {
 header .header-logo-resto i {
   position: absolute;
   left: 2%;
+  bottom: 35%;
   font-size: 125%;
 }
 
@@ -263,23 +264,28 @@ footer .footer-content .footer-text-i a h3 {
 
 .section-menu {
   background-color: #f6f6f6;
+  position: relative;
+}
+.section-menu .menu-bckgrnd-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: 30% 75%;
 }
 .section-menu .main-menu {
-  border: solid;
+  position: relative;
+  margin-top: -75px;
+  border-radius: 50px 50px 0px 0px;
+  background-color: #f6f6f6;
 }
 .section-menu .main-menu button {
   position: relative;
   left: 40%;
   margin-bottom: 20px;
 }
-.section-menu .main-menu .menu-bckgrnd-img {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-}
 .section-menu .main-menu .menu-heading {
-  border-radius: 50px 50px 0px 0px;
   position: relative;
+  padding: 20px 0px;
 }
 .section-menu .main-menu .menu-heading h1 {
   font-family: "Shrikhand";
@@ -290,7 +296,7 @@ footer .footer-content .footer-text-i a h3 {
   font-size: 150%;
   position: absolute;
   right: 5%;
-  top: 10%;
+  top: 40%;
   cursor: pointer;
 }
 .section-menu .main-menu .menu-heading .fas {
@@ -319,14 +325,49 @@ footer .footer-content .footer-text-i a h3 {
 .section-menu .main-menu .menu-content .menu-cards {
   background-color: white;
   border-radius: 25px;
-  box-shadow: #eaeaea 0px 8px 7px;
+  box-shadow: #eaeaea 0px 2px 5px;
   margin: 20px 0px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
 }
 .section-menu .main-menu .menu-content .menu-cards .menu-card-text {
+  padding: 15px;
+}
+.section-menu .main-menu .menu-content .menu-cards h3, .section-menu .main-menu .menu-content .menu-cards p {
+  margin: 0;
   padding: 5px;
 }
-.section-menu .main-menu .menu-content .menu-cards h3 {
-  margin: 0;
+.section-menu .main-menu .menu-content .menu-cards .menu-card-check {
+  transition: 500ms;
+  width: 75px;
+  border-radius: 0px 25px 25px 0px;
+}
+.section-menu .main-menu .menu-content .menu-cards .menu-card-check:hover {
+  background-color: #99E2D0;
+}
+.section-menu .main-menu .menu-content .menu-cards .menu-card-check:hover .fas {
+  opacity: 1;
+}
+.section-menu .main-menu .menu-content .menu-cards .menu-card-check:hover p {
+  right: 50px;
+  transition: 500ms;
+}
+.section-menu .main-menu .menu-content .menu-cards .menu-card-check p {
+  position: relative;
+  top: 35%;
+  right: -20%;
+}
+.section-menu .main-menu .menu-content .menu-cards .menu-card-check i {
+  position: absolute;
+  top: 30%;
+  right: 3%;
+  font-size: 200%;
+}
+.section-menu .main-menu .menu-content .menu-cards .menu-card-check .fas {
+  color: white;
+  opacity: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
