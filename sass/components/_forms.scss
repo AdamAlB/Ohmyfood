@@ -42,7 +42,18 @@
         cursor: pointer;
 
         &:hover {
-            background-color: darken($color-secondary, 50%);
+            transition: 500ms;
+            background-color: lighten($color-primary, 35%);
+            border: lighten($color-primary, 35%) solid;
+            .find-restaurant-img i {
+                transition: 500ms;
+                color: $color-primary;
+                background-color: lighten($color-primary, 35%);
+            }
+            .find-restaurant-text {
+                transition: 500ms;
+                background-color: lighten($color-primary, 35%);
+            }
         }
 
         .find-restaurant-number {

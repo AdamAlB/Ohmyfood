@@ -85,7 +85,18 @@ header .header-logo-resto i {
   }
 }
 .section-find-restaurant .find-restaurant-content .form-find-restaurant:hover {
-  background-color: #790058;
+  transition: 500ms;
+  background-color: #f2eafb;
+  border: #f2eafb solid;
+}
+.section-find-restaurant .find-restaurant-content .form-find-restaurant:hover .find-restaurant-img i {
+  transition: 500ms;
+  color: #9356DC;
+  background-color: #f2eafb;
+}
+.section-find-restaurant .find-restaurant-content .form-find-restaurant:hover .find-restaurant-text {
+  transition: 500ms;
+  background-color: #f2eafb;
 }
 .section-find-restaurant .find-restaurant-content .form-find-restaurant .find-restaurant-number {
   padding: 5px 10px;
@@ -126,6 +137,17 @@ header .header-logo-resto i {
 }
 .explore-button:hover {
   transform: scale(1.1);
+}
+
+.command-button {
+  padding: 25px 0px 75px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.command-button p {
+  font-size: 140%;
+  margin-top: 17px;
 }
 
 /* Main page */
@@ -262,6 +284,7 @@ footer .footer-content .footer-text-i a h3 {
   padding: 0px 10px;
 }
 
+/* Style des pages Restaurants */
 .section-menu {
   background-color: #f6f6f6;
   position: relative;
@@ -277,11 +300,6 @@ footer .footer-content .footer-text-i a h3 {
   margin-top: -75px;
   border-radius: 50px 50px 0px 0px;
   background-color: #f6f6f6;
-}
-.section-menu .main-menu button {
-  position: relative;
-  left: 40%;
-  margin-bottom: 20px;
 }
 .section-menu .main-menu .menu-heading {
   position: relative;
@@ -335,7 +353,8 @@ footer .footer-content .footer-text-i a h3 {
 .section-menu .main-menu .menu-content .menu-cards .menu-card-text {
   padding: 15px;
 }
-.section-menu .main-menu .menu-content .menu-cards h3, .section-menu .main-menu .menu-content .menu-cards p {
+.section-menu .main-menu .menu-content .menu-cards h3,
+.section-menu .main-menu .menu-content .menu-cards p {
   margin: 0;
   padding: 5px;
 }
@@ -360,9 +379,9 @@ footer .footer-content .footer-text-i a h3 {
   right: -20%;
 }
 .section-menu .main-menu .menu-content .menu-cards .menu-card-check i {
-  position: absolute;
-  top: 30%;
-  right: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 200%;
 }
 .section-menu .main-menu .menu-content .menu-cards .menu-card-check .fas {
