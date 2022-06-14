@@ -1,16 +1,16 @@
 .form-location {
-    
+
     .location {
-    border: none;
-    background-color: $bg-color-nav;
-    width: 150px;
+        border: none;
+        background-color: $bg-color-nav;
+        width: 150px;
     }
 }
 
 
 .section-find-restaurant {
     padding: 20px;
-    
+
 
     h2 {
         margin-bottom: 0;
@@ -19,72 +19,85 @@
     .find-restaurant-content {
 
         @media screen and (max-width : 992px) {
-        @include flex-column;
+            @include flex-column;
         }
+
         @include flex-row;
         @include flex-center;
-           
-    
-    .form-find-restaurant {
-        border: $bg-color-general solid;
-        @media screen and (max-width : 992px) {
-        width: 100%;
-        margin: 10px;
-        }
-        width: 30%;
-        background-color: $bg-color-general;
-        margin: 1%;
-        height: 75px;
-        display: flex;
-        align-items: center;
-        border-radius: 25px;
-        box-shadow: $bg-color-nav 0px 5px 5px ;
-        cursor: pointer;
 
-        &:hover {
-            transition: 500ms;
-            background-color: lighten($color-primary, 35%);
-            border: lighten($color-primary, 35%) solid;
+
+        .form-find-restaurant {
+            border: $bg-color-general solid;
+
+            @media screen and (max-width : 992px) {
+                width: 100%;
+                margin: 10px;
+            }
+
+            width: 30%;
+            background-color: $bg-color-general;
+            margin: 1%;
+            height: 75px;
+            display: flex;
+            align-items: center;
+            border-radius: 25px;
+            box-shadow: $bg-color-nav 0px 5px 5px;
+            cursor: pointer;
+
+
+
+            &:hover {
+                transition: 500ms;
+                background-color: lighten($color-primary, 35%);
+                border: lighten($color-primary, 35%) solid;
+
+                .find-restaurant-img i {
+                    transition: 500ms;
+                    color: $color-primary;
+                    background-color: lighten($color-primary, 35%);
+                }
+
+                .find-restaurant-text {
+                    transition: 500ms;
+                    background-color: lighten($color-primary, 35%);
+
+                }
+            }
+
+            .find-restaurant-number {
+                padding: 5px 10px;
+                border-radius: 50px;
+                background-color: $color-primary;
+                color: white;
+                position: relative;
+                right: 15px;
+                @include flex-center;
+                cursor: pointer;
+
+
+
+            }
+
+
             .find-restaurant-img i {
-                transition: 500ms;
-                color: $color-primary;
-                background-color: lighten($color-primary, 35%);
+                background-color: $bg-color-general;
+                color: darken($bg-color-general, 50%);
+                padding: 0px 5px;
+                cursor: pointer;
             }
-            .find-restaurant-text {
-                transition: 500ms;
-                background-color: lighten($color-primary, 35%);
-            }
-        }
 
-        .find-restaurant-number {
-            padding: 5px 10px;
-            border-radius: 50px;
-            background-color: $color-primary;
-            color: white;
-            position: relative;
-            right: 15px;
-            @include flex-center;
-            cursor: pointer;
-            
-            
-            
+            .find-restaurant-text {
+                border: none;
+                background-color: $bg-color-general;
+                padding-left: 10px;
+                cursor: pointer;
+
+                & input {
+                    &:active {
+                        border: $color-primary solid;
+                    }
+                }
+            }
         }
-        
-        
-        .find-restaurant-img i {
-            background-color: $bg-color-general;
-            color: darken($bg-color-general, 50%);
-            padding: 0px 5px;
-            cursor: pointer;
-            
-        }
-        .find-restaurant-text {
-            border: none;
-            background-color: $bg-color-general;
-            padding-left: 10px;
-            cursor: pointer;
-        }
-    }
     }
 }
-

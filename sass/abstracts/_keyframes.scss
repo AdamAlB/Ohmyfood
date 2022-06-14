@@ -1,0 +1,42 @@
+@keyframes loading-ring {
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+        
+      }
+}
+
+@keyframes loading-duration {
+    from {
+        visibility: visible;
+    }
+
+    to {
+        visibility: hidden;
+    }
+}
+
+@keyframes menuAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes checkSlide {
+    from {
+        width: 0px;
+        
+    }
+
+    to {
+        width: 75px;
+        
+    }
+}

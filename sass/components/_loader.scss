@@ -1,0 +1,38 @@
+.loader {
+
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    @include flex-column;
+    @include flex-center;
+    position: fixed;
+    animation: loading-duration forwards ;
+    animation-duration: 1500ms;
+    animation-iteration-count: 1;
+    z-index: 2;
+
+    .loading-logo {
+        font-family: 'Shrikhand';
+        font-size: 50px;
+
+    }
+
+    .loading-ring {
+        position: relative;
+        width: 150px;
+        height: 150px;
+
+        div {
+            position: absolute;
+            margin: 20px;
+            width: 90%;
+            height: 90%;
+            border: 10px solid $color-primary;
+            border-radius: 100%;
+            border-color: $color-primary $color-secondary $color-primary $color-secondary;
+            animation: loading-ring 1200ms cubic-bezier(.49,.89,.59,.13) infinite;
+
+            
+        }
+        }
+    }
