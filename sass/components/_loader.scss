@@ -7,7 +7,7 @@
     @include flex-center;
     position: fixed;
     animation: loading-duration forwards ;
-    animation-duration: 1500ms;
+    animation-duration: 2000ms;
     animation-iteration-count: 1;
     z-index: 2;
 
@@ -29,7 +29,7 @@
             height: 90%;
             border: 10px solid $color-primary;
             border-radius: 100%;
-            border-color: $color-primary $color-secondary $color-primary $color-secondary;
+            border-color: $color-primary $color-secondary $color-tertiary $bg-color-nav;
             animation: loading-ring 1200ms cubic-bezier(.49,.89,.59,.13) infinite;
 
             

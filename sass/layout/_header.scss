@@ -1,6 +1,6 @@
 header {
-    
-    
+    position: relative;
+    z-index: 2;
     
     .header-logo, .header-logo-resto {
         @include flex-center ;
@@ -24,14 +24,7 @@ header {
 
 }
 
-    .nav-location {
-        background-color: $bg-color-nav;
-        height: 60px;
-        @include flex-center;
-        
-        position: relative;
-        z-index: -1;
-    }
+    
     
 
     

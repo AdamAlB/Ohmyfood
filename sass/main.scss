@@ -33,6 +33,14 @@
 
 @import './abstracts/keyframes' ;
 
+/* Footer */
+
+@import './layout/footer' ;
+
+/* Style des pages Restaurants */
+
+@import 'pages/resto' ;
+
 /* Main page */
 
 a {
@@ -45,12 +53,15 @@ a {
     @include flex-column;
     padding: 25px 20px;
     h1 {
-        
-        
-        font-size: 150%;
+        font-size: 150%;        
+        }
+
+    h1, p {
+        text-align: center;
+    }
         
     }
-}
+
 
 
 .section-restaurants {
@@ -137,10 +148,3 @@ a {
     }
 }
 
-/* Footer */
-
-@import './layout/footer' ;
-
-/* Style des pages Restaurants */
-
-@import 'pages/resto' ;

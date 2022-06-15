@@ -15,6 +15,10 @@ body a {
 /*Mixins */
 /* Variables */
 /* Header */
+header {
+  position: relative;
+  z-index: 2;
+}
 header .header-logo, header .header-logo-resto {
   display: flex;
   justify-content: center;
@@ -30,21 +34,19 @@ header .header-logo-resto i {
   font-size: 125%;
 }
 
+/* Forms */
 .nav-location {
   background-color: #eaeaea;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  z-index: -1;
 }
-
-/* Forms */
-.form-location .location {
+.nav-location .form-location .location {
   border: none;
   background-color: #eaeaea;
   width: 150px;
+  outline: none;
 }
 
 .section-find-restaurant {
@@ -76,7 +78,6 @@ header .header-logo-resto i {
   align-items: center;
   border-radius: 25px;
   box-shadow: #eaeaea 0px 5px 5px;
-  cursor: pointer;
 }
 @media screen and (max-width: 992px) {
   .section-find-restaurant .find-restaurant-content .form-find-restaurant {
@@ -108,26 +109,21 @@ header .header-logo-resto i {
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
 }
 .section-find-restaurant .find-restaurant-content .form-find-restaurant .find-restaurant-img i {
   background-color: #f6f6f6;
   color: #777777;
   padding: 0px 5px;
-  cursor: pointer;
 }
 .section-find-restaurant .find-restaurant-content .form-find-restaurant .find-restaurant-text {
   border: none;
   background-color: #f6f6f6;
   padding-left: 10px;
-  cursor: pointer;
-}
-.section-find-restaurant .find-restaurant-content .form-find-restaurant .find-restaurant-text input:active {
-  border: #9356DC solid;
+  outline: none;
 }
 
 /* Buttons */
-.explore-button {
+.button {
   width: 230px;
   height: 60px;
   border-radius: 50px;
@@ -138,21 +134,19 @@ header .header-logo-resto i {
   cursor: pointer;
   transition: all 500ms;
 }
-.explore-button:hover {
+.button:hover {
   transform: scale(1.1);
   opacity: 0.8;
   box-shadow: gray 2px 6px 10px;
 }
-
-.command-button {
+.button--command {
   padding: 25px 0px 75px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.command-button p {
-  font-size: 140%;
-  margin-top: 17px;
+.button--command button {
+  font-size: 125%;
 }
 
 /* Loader */
@@ -167,7 +161,7 @@ header .header-logo-resto i {
   align-items: center;
   position: fixed;
   animation: loading-duration forwards;
-  animation-duration: 1500ms;
+  animation-duration: 2000ms;
   animation-iteration-count: 1;
   z-index: 2;
 }
@@ -187,7 +181,7 @@ header .header-logo-resto i {
   height: 90%;
   border: 10px solid #9356DC;
   border-radius: 100%;
-  border-color: #9356DC #FF79DA #9356DC #FF79DA;
+  border-color: #9356DC #FF79DA #99E2D0 #eaeaea;
   animation: loading-ring 1200ms cubic-bezier(0.49, 0.89, 0.59, 0.13) infinite;
 }
 
@@ -225,6 +219,179 @@ header .header-logo-resto i {
     width: 75px;
   }
 }
+/* Footer */
+footer {
+  background-color: #353535;
+  color: white;
+  display: flex;
+  padding: 10px 20px;
+  display: flex;
+  flex-flow: column wrap;
+}
+footer .footer-heading {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 90%;
+}
+footer .footer-content {
+  display: flex;
+  flex-flow: column wrap;
+}
+footer .footer-content h3 {
+  margin: 5px 0px;
+}
+footer .footer-content a {
+  color: white;
+}
+footer .footer-content .footer-text-i a {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+footer .footer-content .footer-text-i a h3 {
+  padding: 0px 10px;
+}
+
+/* Style des pages Restaurants */
+.section-menu {
+  background-color: #f6f6f6;
+  position: relative;
+}
+.section-menu .menu-bckgrnd-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: 30% 75%;
+}
+.section-menu .main-menu {
+  position: relative;
+  margin-top: -75px;
+  border-radius: 50px 50px 0px 0px;
+  background-color: #f6f6f6;
+}
+.section-menu .main-menu .menu-heading {
+  position: relative;
+  padding-top: 20px;
+}
+.section-menu .main-menu .menu-heading h1 {
+  font-family: "Shrikhand";
+  padding: 10px 20px 0px 20px;
+  font-size: 175%;
+  margin: 0;
+}
+.section-menu .main-menu .menu-heading i {
+  font-size: 175%;
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+  cursor: pointer;
+}
+.section-menu .main-menu .menu-heading .fas {
+  color: transparent;
+  background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 300ms;
+}
+.section-menu .main-menu .menu-heading .fas:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+.section-menu .main-menu .menu-content {
+  padding: 10px 0px;
+  animation: menuAppear 1s;
+}
+.section-menu .main-menu .menu-content--plats {
+  animation-delay: 200ms;
+}
+.section-menu .main-menu .menu-content--desserts {
+  animation-delay: 400ms;
+}
+.section-menu .main-menu .menu-content h2 {
+  font-size: 125%;
+  font-weight: 100;
+  padding-left: 20px;
+}
+.section-menu .main-menu .menu-content h2 span {
+  text-decoration: underline #99E2D0 4px;
+  text-underline-position: under;
+}
+.section-menu .main-menu .menu-content .menu-cards-content {
+  display: flex;
+  flex-flow: row wrap;
+}
+.section-menu .main-menu .menu-content .menu-cards {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: #eaeaea 5px 10px 10px;
+  margin: 10px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 95%;
+}
+@media screen and (min-width: 768px) {
+  .section-menu .main-menu .menu-content .menu-cards {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .section-menu .main-menu .menu-content .menu-cards {
+    width: 30%;
+  }
+}
+.section-menu .main-menu .menu-content .menu-cards:hover .menu-card-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: checkSlide 500ms forwards;
+}
+.section-menu .main-menu .menu-content .menu-cards .menu-card-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 10px 0px 10px 15px;
+}
+.section-menu .main-menu .menu-content .menu-cards h3,
+.section-menu .main-menu .menu-content .menu-cards p {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 5px 0px;
+}
+.section-menu .main-menu .menu-content .menu-cards p {
+  font-size: 95%;
+}
+.section-menu .main-menu .menu-content .menu-cards h3 {
+  font-size: 100%;
+}
+.section-menu .main-menu .menu-content .menu-cards .menu-card-price-check {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.section-menu .main-menu .menu-content .menu-cards .menu-card-price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.section-menu .main-menu .menu-content .menu-cards .menu-card-price p {
+  margin: 0;
+  padding: 15px 30px 15px 0px;
+  font-weight: bold;
+  color: #404040;
+}
+.section-menu .main-menu .menu-content .menu-cards .menu-card-check {
+  border-radius: 0px 20px 20px 0px;
+  display: none;
+  background-color: #99E2D0;
+}
+.section-menu .main-menu .menu-content .menu-cards .menu-card-check i {
+  font-size: 200%;
+  color: white;
+}
+
 /* Main page */
 a {
   color: black;
@@ -241,6 +408,9 @@ a {
 }
 .section-explore h1 {
   font-size: 150%;
+}
+.section-explore h1, .section-explore p {
+  text-align: center;
 }
 
 .section-restaurants {
@@ -326,145 +496,6 @@ a {
 .section-restaurants .restaurants-content .restaurants-cards .restaurants-cards-content .fas:hover {
   opacity: 1;
   transform: scale(1.1);
-}
-
-/* Footer */
-footer {
-  background-color: #353535;
-  color: white;
-  display: flex;
-  padding: 10px 20px;
-  display: flex;
-  flex-flow: column wrap;
-}
-footer .footer-heading {
-  font-family: "Shrikhand", sans-serif;
-}
-footer .footer-content {
-  display: flex;
-  flex-flow: column wrap;
-}
-footer .footer-content h3 {
-  margin: 5px 0px;
-}
-footer .footer-content a {
-  color: white;
-}
-footer .footer-content .footer-text-i a {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-}
-footer .footer-content .footer-text-i a h3 {
-  padding: 0px 10px;
-}
-
-/* Style des pages Restaurants */
-.section-menu {
-  background-color: #f6f6f6;
-  position: relative;
-}
-.section-menu .menu-bckgrnd-img {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-  object-position: 30% 75%;
-}
-.section-menu .main-menu {
-  position: relative;
-  margin-top: -75px;
-  border-radius: 50px 50px 0px 0px;
-  background-color: #f6f6f6;
-}
-.section-menu .main-menu .menu-heading {
-  position: relative;
-  padding: 20px 0px;
-}
-.section-menu .main-menu .menu-heading h1 {
-  font-family: "Shrikhand";
-  padding: 0px 20px;
-  font-size: 200%;
-}
-.section-menu .main-menu .menu-heading i {
-  font-size: 150%;
-  position: absolute;
-  right: 5%;
-  top: 40%;
-  cursor: pointer;
-}
-.section-menu .main-menu .menu-heading .fas {
-  color: transparent;
-  background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 0;
-  transition: all 300ms;
-}
-.section-menu .main-menu .menu-heading .fas:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
-.section-menu .main-menu .menu-content {
-  padding: 0px 20px;
-  animation: menuAppear 1s;
-}
-.section-menu .main-menu .menu-content--plats {
-  animation-delay: 200ms;
-}
-.section-menu .main-menu .menu-content--desserts {
-  animation-delay: 400ms;
-}
-.section-menu .main-menu .menu-content h2 {
-  font-size: 125%;
-  font-weight: 100;
-}
-.section-menu .main-menu .menu-content h2 span {
-  text-decoration: underline #99E2D0 4px;
-  text-underline-position: under;
-}
-.section-menu .main-menu .menu-content .menu-cards {
-  background-color: white;
-  border-radius: 25px;
-  box-shadow: #eaeaea 0px 2px 5px;
-  margin: 20px 0px;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-}
-.section-menu .main-menu .menu-content .menu-cards:hover .menu-card-check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: checkSlide 500ms forwards;
-}
-.section-menu .main-menu .menu-content .menu-cards .menu-card-text {
-  padding: 15px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.section-menu .main-menu .menu-content .menu-cards h3,
-.section-menu .main-menu .menu-content .menu-cards p {
-  margin: 0;
-  padding: 5px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.section-menu .main-menu .menu-content .menu-cards .menu-card-price {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.section-menu .main-menu .menu-content .menu-cards .menu-card-check {
-  border-radius: 0px 25px 25px 0px;
-  display: none;
-  background-color: #99E2D0;
-}
-.section-menu .main-menu .menu-content .menu-cards .menu-card-check i {
-  font-size: 200%;
-  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
