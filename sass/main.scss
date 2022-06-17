@@ -95,7 +95,7 @@ a {
         .restaurants-cards {
             box-shadow: $bg-color-nav 0px 8px 7px ;
             border-radius: 0px 0px 25px 25px ;
-            margin: 20px;
+            margin: 20px 0px;
             width: 43%;
             @media screen and (max-width : 768px) {
                 width: 100%;

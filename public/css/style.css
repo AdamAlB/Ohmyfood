@@ -56,6 +56,7 @@ header .header-logo-resto i {
   margin-bottom: 0;
 }
 .section-find-restaurant .find-restaurant-content {
+  margin: 20px 0px;
   display: flex;
   flex-flow: row wrap;
   display: flex;
@@ -82,7 +83,7 @@ header .header-logo-resto i {
 @media screen and (max-width: 992px) {
   .section-find-restaurant .find-restaurant-content .form-find-restaurant {
     width: 100%;
-    margin: 10px;
+    margin: 10px 0px;
   }
 }
 .section-find-restaurant .find-restaurant-content .form-find-restaurant:hover {
@@ -163,7 +164,7 @@ header .header-logo-resto i {
   animation: loading-duration forwards;
   animation-duration: 2000ms;
   animation-iteration-count: 1;
-  z-index: 2;
+  z-index: 3;
 }
 .loader .loading-logo {
   font-family: "Shrikhand";
@@ -378,7 +379,7 @@ footer .footer-content .footer-text-i a h3 {
 }
 .section-menu .main-menu .menu-content .menu-cards .menu-card-price p {
   margin: 0;
-  padding: 15px 30px 15px 0px;
+  padding: 15px 30px 15px 2px;
   font-weight: bold;
   color: #404040;
 }
@@ -449,7 +450,7 @@ a {
 .section-restaurants .restaurants-content .restaurants-cards {
   box-shadow: #eaeaea 0px 8px 7px;
   border-radius: 0px 0px 25px 25px;
-  margin: 20px;
+  margin: 20px 0px;
   width: 43%;
 }
 @media screen and (max-width: 768px) {
