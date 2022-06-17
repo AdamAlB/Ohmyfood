@@ -416,10 +416,11 @@ a {
 
 .section-restaurants {
   background-color: #f6f6f6;
-  padding: 20px;
+  padding: 20px 0px;
 }
 .section-restaurants h2 {
   margin-bottom: 0;
+  margin-left: 20px;
 }
 .section-restaurants .restaurants-content {
   display: flex;
@@ -450,7 +451,7 @@ a {
 .section-restaurants .restaurants-content .restaurants-cards {
   box-shadow: #eaeaea 0px 8px 7px;
   border-radius: 0px 0px 25px 25px;
-  margin: 20px 0px;
+  margin: 20px;
   width: 43%;
 }
 @media screen and (max-width: 768px) {
