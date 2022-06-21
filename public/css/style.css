@@ -486,6 +486,7 @@ a {
   position: absolute;
   right: 5%;
   bottom: 35%;
+  cursor: pointer;
 }
 .section-restaurants .restaurants-content .restaurants-cards .restaurants-cards-content .fas {
   color: transparent;
