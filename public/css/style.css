@@ -48,6 +48,10 @@ header .header-logo-resto i {
   width: 150px;
   outline: none;
 }
+.nav-location .form-location .location::placeholder {
+  color: black;
+  opacity: 1;
+}
 
 .section-find-restaurant {
   padding: 20px;

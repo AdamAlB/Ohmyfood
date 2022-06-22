@@ -13,6 +13,10 @@
             background-color: $bg-color-nav;
             width: 150px;
             outline: none;
+            &::placeholder{
+                color: black;
+                opacity: 1;
+            }
         }
     }
 }
