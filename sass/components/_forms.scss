@@ -71,6 +71,7 @@
                 .find-restaurant-text {
                     transition: 500ms;
                     background-color: lighten($color-primary, 35%);
+                    
 
                 }
             }
@@ -102,6 +103,10 @@
                 background-color: $bg-color-general;
                 padding-left: 10px;
                 outline: none;
+                &::placeholder{
+                    color: black;
+                    opacity: 1;
+                }
                 
 
                

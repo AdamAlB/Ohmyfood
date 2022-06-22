@@ -122,6 +122,10 @@ header .header-logo-resto i {
   padding-left: 10px;
   outline: none;
 }
+.section-find-restaurant .find-restaurant-content .form-find-restaurant .find-restaurant-text::placeholder {
+  color: black;
+  opacity: 1;
+}
 
 /* Buttons */
 .button {
