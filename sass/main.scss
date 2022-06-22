@@ -140,7 +140,7 @@ a {
                         -webkit-background-clip: text;
                         opacity: 0;
                         transition: all 300ms;
-                        &:hover {
+                        &:hover, &:active, &:focus {
                             opacity: 1;
                             transform: scale(1.1);
                         }                    

@@ -294,7 +294,7 @@ footer .footer-content .footer-text-i a h3 {
   opacity: 0;
   transition: all 300ms;
 }
-.section-menu .main-menu .menu-heading .fas:hover {
+.section-menu .main-menu .menu-heading .fas:hover, .section-menu .main-menu .menu-heading .fas:active, .section-menu .main-menu .menu-heading .fas:focus {
   opacity: 1;
   transform: scale(1.2);
 }
@@ -496,7 +496,7 @@ a {
   opacity: 0;
   transition: all 300ms;
 }
-.section-restaurants .restaurants-content .restaurants-cards .restaurants-cards-content .fas:hover {
+.section-restaurants .restaurants-content .restaurants-cards .restaurants-cards-content .fas:hover, .section-restaurants .restaurants-content .restaurants-cards .restaurants-cards-content .fas:active, .section-restaurants .restaurants-content .restaurants-cards .restaurants-cards-content .fas:focus {
   opacity: 1;
   transform: scale(1.1);
 }
